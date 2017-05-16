@@ -26,16 +26,20 @@ def build_test_info(test_num, test_args, test_arg_names, test_valid_results, tes
     return test_info
 
 
-with open("tests.yml", "r") as tests:
-    test_data = yaml.load(tests)
+with open("procedure_info.yml", "r") as procedure_info:
+    proc_data = yaml.load(procedure_info)
 
-for procedure_data in test_data:
-    if procedure_data['run']:
-        proc_name = procedure_data['procedure']
-        algo_name = procedure_data['name']
+with open("../tests.yml", "r") as tests_info:
+    test_dict = yaml.load(tests_info)
+
+for proc_info in proc_data:
+    if proc_info['run']:
+        proc_name = proc_info['procedure']
+        algo_name = proc_info['name']
         procedure = globals()[proc_name]
-        arg_names = procedure_data['arg_names']
-        tests = procedure_data['tests']
+        test_type = proc_info['type']
+        arg_names = test_dict[test_type]['arg_names']
+        tests = test_dict[test_type]['tests']
         print('"{}" Tests:'.format(algo_name))
         for index, test in enumerate(tests):
             args = test["args"]

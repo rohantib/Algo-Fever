@@ -1,0 +1,14 @@
+- procedure: linear_search
+  name: Linear Search
+  type: Unordered List Search
+  run: True
+
+- procedure: better_linear_search
+  name: Better Linear Search
+  type: Unordered List Search
+  run: True
+
+- procedure: sentinel_linear_search
+  name: Sentinel Linear Search
+  type: Unordered List Search
+  run: True
