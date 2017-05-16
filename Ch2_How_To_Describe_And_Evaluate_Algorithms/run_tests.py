@@ -29,7 +29,7 @@ def build_test_info(test_num, test_args, test_arg_names, test_valid_results, tes
 with open("procedure_info.yml", "r") as procedure_info:
     proc_data = yaml.load(procedure_info)
 
-with open("../tests.yml", "r") as tests_info:
+with open("tests.yml", "r") as tests_info:
     test_dict = yaml.load(tests_info)
 
 for proc_info in proc_data:
