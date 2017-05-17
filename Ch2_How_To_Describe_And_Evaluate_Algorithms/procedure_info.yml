@@ -12,3 +12,8 @@
   name: Sentinel Linear Search
   type: Unordered List Search
   run: True
+
+- procedure: factorial
+  name: Factorial
+  type: Factorial
+  run: True

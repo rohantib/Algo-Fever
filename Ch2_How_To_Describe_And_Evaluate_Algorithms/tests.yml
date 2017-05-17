@@ -1,18 +1,35 @@
 Unordered List Search:
-    arg_names:
-      - Array
-      - Length of Array
-      - Search Query
-    tests:
-      - args: [[1, 2, 3], 3, 2]
-        results: [1]
-      - args: [[5, 2, 9, 1, 5], 5, 5]
-        results: [0, 4]
-      - args: [[19028, 378193, 91789472, 28383728], 4, 91789472]
-        results: [2]
-      - args: [[2], 1, 3]
-        results: ["NOT-FOUND"]
-      - args: [[9, 2, 5, 7, 1, 4], 6, 10]
-        results: ["NOT-FOUND"]
-      - args: [[3, 4, 1, 2, 8], 5, 8]
-        results: [4]
+  arg_names:
+    - Array
+    - Length of Array
+    - Search Query
+  tests:
+    - args: [[1, 2, 3], 3, 2]
+      results: [1]
+    - args: [[5, 2, 9, 1, 5], 5, 5]
+      results: [0, 4]
+    - args: [[19028, 378193, 91789472, 28383728], 4, 91789472]
+      results: [2]
+    - args: [[2], 1, 3]
+      results: ["NOT-FOUND"]
+    - args: [[9, 2, 5, 7, 1, 4], 6, 10]
+      results: ["NOT-FOUND"]
+    - args: [[3, 4, 1, 2, 8], 5, 8]
+      results: [4]
+
+Factorial:
+  arg_names:
+    - Integer
+  tests:
+    - args: [0]
+      results: [1]
+    - args: [1]
+      results: [1]
+    - args: [2]
+      results: [2]
+    - args: [3]
+      results: [6]
+    - args: [4]
+      results: [24]
+    - args: [5]
+      results: [120]

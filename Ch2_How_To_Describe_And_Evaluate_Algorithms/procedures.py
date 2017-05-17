@@ -62,4 +62,17 @@ def sentinel_linear_search(A, n, x):
     return "NOT-FOUND"
 
 
+def factorial(n):
+    """
+    Use recursion to compute the factorial of a non-negative integer
+
+    Args:
+        n: an integer greater than or equal to 0 to compute the factorial of
+    Returns:
+        the value of n! (n-factorial)
+    """
+    if n == 0:
+        return 1
+    return n * factorial(n-1)
+
 

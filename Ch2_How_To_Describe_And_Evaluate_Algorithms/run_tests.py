@@ -18,7 +18,9 @@ def build_test_info(test_num, test_args, test_arg_names, test_valid_results, tes
         arg_info = "{}: {}, ".format(name, arg)
         test_info += arg_info
     # Add the expected results of the test
-    expected_results_info = "Expected Answers: {}, ".format(test_valid_results)
+    expected_results_info = "Expected Answers: "
+    for valid_result in test_valid_results:
+        expected_results_info += "{}, ".format(valid_result)
     test_info += expected_results_info
     # Add returned result of the test
     proc_result = "Returned Answer: {}".format(test_result)
