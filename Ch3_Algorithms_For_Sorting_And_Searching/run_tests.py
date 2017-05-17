@@ -1,8 +1,6 @@
 import yaml
 from procedures import *
 
-# TODO: Write Unordered List Search tests containing other data types than numbers
-
 
 def build_test_info(test_num, test_args, test_arg_names, test_valid_results, test_result):
     """

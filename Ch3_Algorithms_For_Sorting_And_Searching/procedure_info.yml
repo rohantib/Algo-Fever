@@ -1,0 +1,4 @@
+- procedure: linear_search
+  name: Linear Search
+  type: Unordered List Search
+  run: True

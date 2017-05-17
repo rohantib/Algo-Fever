@@ -17,3 +17,8 @@
   name: Factorial
   type: Factorial
   run: True
+
+- procedure: recursive_linear_search
+  name: Recursive Linear Search
+  type: Unordered Recursive List Search
+  run: True

@@ -7,7 +7,7 @@ def linear_search(A, n, x):
         n: the number of elements in A to search through.
         x: the value being searched for.
     Returns:
-        the index of an element that is equal to x, or the string "NOT-FOUND"
+        the index of an element that is equal to x (zero-based), or the string "NOT-FOUND"
         to show that x is not in the array.
     """
     i = 0
@@ -28,7 +28,7 @@ def better_linear_search(A, n, x):
         n: the number of elements in A to search through.
         x: the value being searched for.
     Returns:
-        the index of the first element equal to x, or the string "NOT-FOUND"
+        the index of the first element equal to x (zero-based), or the string "NOT-FOUND"
         to show that x is not in the array.
     """
     i = 0
@@ -48,7 +48,7 @@ def sentinel_linear_search(A, n, x):
         n: the number of elements in A to search through.
         x: the value being searched for.
     Returns:
-        the index of the first element equal to x, or the string "NOT-FOUND"
+        the index of the first element equal to x (zero-based), or the string "NOT-FOUND"
         to show that x is not in the array.
     """
     last = A[n-1]
@@ -76,3 +76,21 @@ def factorial(n):
     return n * factorial(n-1)
 
 
+def recursive_linear_search(A, n, i, x):
+    """
+    Use optimized linear search with a sentinel to find a value in an array.
+
+    Args:
+        A: any array.
+        n: the number of elements in A to search through.
+        i: the current index that the search is checking (zero-based).
+        x: the value being searched for.
+    Returns:
+        the index of the first element equal to x (zero-based), or the string "NOT-FOUND"
+        to show that x is not in the array.
+    """
+    if i >= n:
+        return "NOT-FOUND"
+    if A[i] == x:
+        return i
+    return recursive_linear_search(A, n, i+1, x)

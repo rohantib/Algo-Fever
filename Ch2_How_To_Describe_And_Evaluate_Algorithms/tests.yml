@@ -33,3 +33,23 @@ Factorial:
       results: [24]
     - args: [5]
       results: [120]
+
+Unordered Recursive List Search:
+  arg_names:
+    - Array
+    - Length of Array
+    - Index
+    - Search Query
+  tests:
+    - args: [[1, 2, 3], 3, 0, 2]
+      results: [1]
+    - args: [[5, 2, 9, 1, 5], 5, 0, 5]
+      results: [0, 4]
+    - args: [[19028, 378193, 91789472, 28383728], 4, 0, 91789472]
+      results: [2]
+    - args: [[2], 1, 0, 3]
+      results: ["NOT-FOUND"]
+    - args: [[9, 2, 5, 7, 1, 4], 6, 0, 10]
+      results: ["NOT-FOUND"]
+    - args: [[3, 4, 1, 2, 8], 5, 0, 8]
+      results: [4]
