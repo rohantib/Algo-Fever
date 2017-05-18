@@ -12,9 +12,9 @@ Unordered List Search:
       results: [2]
     - args: [[2], 1, 3]
       results: ["NOT-FOUND"]
-    - args: [[9, 2, 5, 7, 1, 4], 6, 10]
+    - args: [["asd", "bes", "g", "algos", "one", "asdf"], 6, 10]
       results: ["NOT-FOUND"]
-    - args: [[3, 4, 1, 2, 8], 5, 8]
+    - args: [["str", "string", "asdf", "ogla", "algo"], 5, "algo"]
       results: [4]
 
 Factorial:
@@ -49,7 +49,7 @@ Unordered Recursive List Search:
       results: [2]
     - args: [[2], 1, 0, 3]
       results: ["NOT-FOUND"]
-    - args: [[9, 2, 5, 7, 1, 4], 6, 0, 10]
+    - args: [["asd", "bes", "g", "algos", "one", "asdf"], 6, 0, 10]
       results: ["NOT-FOUND"]
-    - args: [[3, 4, 1, 2, 8], 5, 0, 8]
+    - args: [["str", "string", "asdf", "ogla", "algo"], 5, 0, "algo"]
       results: [4]
