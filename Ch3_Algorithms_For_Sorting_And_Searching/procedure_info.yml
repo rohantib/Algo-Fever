@@ -2,3 +2,8 @@
   name: Binary Search
   type: Sorted List Search
   run: True
+
+- procedure: recursive_binary_search
+  name: Recursive Binary Search
+  type: Recursive Sorted List Search
+  run: True
