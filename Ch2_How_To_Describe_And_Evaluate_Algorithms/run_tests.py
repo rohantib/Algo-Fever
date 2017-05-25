@@ -1,3 +1,4 @@
+import copy
 import yaml
 from procedures import *
 
@@ -44,9 +45,11 @@ for proc_info in proc_data:
         tests = test_dict[test_type]['tests']
         print('"{}" Tests:'.format(algo_name))
         for index, test in enumerate(tests):
-            args = test["args"]
+            # Duplicate all args so that mutable objects are not modified by the procedure
+            original_args = test["args"]
+            copied_args = map(copy.copy, original_args)
             valid_results = test["results"]
-            returned_result = procedure(*args)
-            test_information = build_test_info(index + 1, args, arg_names, valid_results, returned_result)
+            returned_result = procedure(*copied_args)
+            test_information = build_test_info(index + 1, original_args, arg_names, valid_results, returned_result)
             print(test_information)
         print()
