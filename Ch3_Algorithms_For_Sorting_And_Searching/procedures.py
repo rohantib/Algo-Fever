@@ -46,3 +46,25 @@ def recursive_binary_search(A, p, r, x):
     elif A[q] < x:
         return recursive_binary_search(A, q + 1, r, x)
 
+
+def selection_sort(A, n):
+    """
+    Sorts an array into non-decreasing order using selection sort.
+    
+    Args:
+        A: an array to be sorted.
+        n: the number of elements in A to sort.
+    Returns:
+         the array A sorted in non-decreasing order.
+    """
+    i = 0
+    while i < n - 1:
+        smallest = i
+        j = i + 1
+        while j < n:
+            if A[j] < A[smallest]:
+                smallest = j
+            j += 1
+        A[i], A[smallest] = A[smallest], A[i]
+        i += 1
+    return A

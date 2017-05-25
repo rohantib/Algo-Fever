@@ -7,3 +7,8 @@
   name: Recursive Binary Search
   type: Recursive Sorted List Search
   run: True
+
+- procedure: selection_sort
+  name: Selection Sort
+  type: List Sort
+  run: True
