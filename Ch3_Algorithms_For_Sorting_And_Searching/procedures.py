@@ -68,3 +68,25 @@ def selection_sort(A, n):
         A[i], A[smallest] = A[smallest], A[i]
         i += 1
     return A
+
+
+def insertion_sort(A, n):
+    """
+    Sorts an array into non-decreasing order using insertion sort.
+
+    Args:
+        A: an array to be sorted.
+        n: the number of elements in A to sort.
+    Returns:
+         the array A sorted in non-decreasing order.
+    """
+    i = 1
+    while i < n:
+        key = A[i]
+        j = i - 1
+        while j >= 0 and A[j] > key:
+            A[j+1] = A[j]
+            j -= 1
+        A[j+1] = key
+        i += 1
+    return A

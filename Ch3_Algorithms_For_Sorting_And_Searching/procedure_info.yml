@@ -12,3 +12,8 @@
   name: Selection Sort
   type: List Sort
   run: True
+
+- procedure: insertion_sort
+  name: Insertion Sort
+  type: List Sort
+  run: True
